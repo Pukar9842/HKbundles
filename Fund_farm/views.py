@@ -9,7 +9,3 @@ def index(request):
 
 def availablefarms(request):
     return HttpResponse('Available Farms')
-
-
-
-
