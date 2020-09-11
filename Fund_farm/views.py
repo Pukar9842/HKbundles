@@ -1,10 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import FundFarm
 
 
 # /FundFarm-> index
 def index(request):
-    return HttpResponse('Fund our farm')
+    farms_info = FundFarm.objects.all()
+    return HttpResponse('Fund a farm')
 
 
 def availablefarms(request):
