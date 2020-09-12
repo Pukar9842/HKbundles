@@ -5,8 +5,8 @@ from .models import FundFarm
 
 # /FundFarm-> index
 def index(request):
-    farms_info = FundFarm.objects.all()
-    return HttpResponse('Fund a farm')
+    farm_items = FundFarm.objects.all()
+    return render(request, 'index.html', {'farms': farm_items})
 
 
 def availablefarms(request):

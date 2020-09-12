@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HamroKheti invest in Agriculture</title>
+    <meta charset="utf-8">
+    <meta name="description" content="HamroKheti is an Agriculture company in Nepal empowering farmers by
+     investing on agriculture using digital platform.">
+    <meta name="Keywords" content="HamroKheti,hamro kheti,Agriculture in Nepal,Agtech in Nepal,investment,invest
+     in agriculture,Agriculture,online kheti,smart kheti,smartKheti,krishi,krishibikashbank,krisi anudan,kissan,
+     agriculture loan,nepali krishi,Nepalese agriculture,food online,online,online shopping,online vegetables,
+     vegetbles online,organic,organic farming,farming,organic food,organic vegetables,organic food">
+    <meta name="author" content="redshift,redshift tech">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+    <!--<meta http-equiv="refresh" content="10">-->
+</head>
+<body>
+{% extends 'base.html'%}
+{% block farm_content%}
+<h1>Invest On Agriculture And Earn Profit</h1>
+<h2> Empower Farmers And Be The Part Of Agricultural Revolution In Nepal </h2>
+<div class="row">
+     {% for farm in farms %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{farm.image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ farm.crop_name}}</h5>
+                <p class="card-text">RS: {{farm.cost_per_unit}}/-  {{farm.roi_in_percent}}% return in {{farm.tenure_for_ROI}}</p>
+                <a href="#" class="btn btn-primary">Fund {{farm.crop_name}} Farm</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{%endblock%}
+
+
+</body>
+</html>
