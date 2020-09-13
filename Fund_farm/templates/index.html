@@ -1,23 +1,29 @@
 {% extends 'base.html'%}
 {% block farm_content%}
-<h1>Invest On Agriculture And Earn Profit</h1>
-<h2> Empower Farmers And Be The Part Of Agricultural Revolution In Nepal </h2>
-<div class="row">
+<div class="container-fluid">
+<h1 style="color:orange; margin:1rem 1rem 0rem 3rem;"><strong>Invest On Agriculture And Earn Profit</strong></h1>
+<h2 style="color:green; margin:1rem 1rem 0rem 3rem;"> <strong>Empower Farmers And Be The Part Of Agricultural Revolution In Nepal</strong> </h2>
+</div>
+<div class="container-fluid">
+ <div class="row" style="margin:2rem 2rem 0rem 2rem;">
      {% for farm in farms %}
-    <div class="col">
-        <div class="card " style="width: 18rem;" >
-            <img src="{{farm.image_url}}" class="card-img-top" alt="responsive image">
+    <div class="col" style="margin:0.5rem; ">
+        <div class="card " style="width: 23rem;"  >
+            <img src="{{farm.image_url}}" class="card-img-top" alt="Agriculture product
+              " width="275" height="275" >
             <div class="card-body">
-                <h5 class="card-title">{{ farm.crop_name}}</h5>
-                <p class="card-text">RS: {{farm.cost_per_unit}}/-</p>
-                <p class="card-text"> <strong>{{farm.roi_in_percent}}% return in {{farm.tenure_for_ROI}}</strong></p>
-                <a href="#" class="btn btn-primary">Fund {{farm.crop_name}} Farm</a>
+                <h5 class="card-title" style="color:green;"><strong>{{ farm.crop_name}}</strong></h5>
+                <p class="card-text" style="color:green;"><strong>RS: {{farm.cost_per_unit}}/-</strong></p>
+                <p class="card-text" style="color:green;"> <strong>{{farm.roi_in_percent}}% return
+                    in {{farm.tenure_for_ROI}} months</strong></p>
+                <a href="#" class="btn btn-success" style="color:orange;"><strong>Fund {{farm.crop_name}}
+                    Farm</strong></a>
             </div>
         </div>
     </div>
     {% endfor %}
+ </div>
 </div>
-
 {%endblock%}
 
 

@@ -11,5 +11,5 @@ class FundFarm(models.Model):
     units_available = models.IntegerField()
     image_url = models.CharField(max_length=2084)
     roi_in_percent = models.IntegerField(max_length=3)
-    tenure_for_ROI = models.CharField(max_length=10)
+    tenure_for_ROI = models.IntegerField(max_length=10)
 

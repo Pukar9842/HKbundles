@@ -1,4 +1,4 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,46 +16,48 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'Fund_farm/css/style.css' %}">
     <title>HamroKheti invest in Agriculture</title>
 </head>
 <body>
-{% load static %}
-<div class="container">
-   <nav class="navbar navbar-expand-lg navbar-dark static-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-          <img src="{% static 'Fund_farm/images/HamroKhetilogo.png'%}" alt="" width="150" height="150">
-        </a>
-    <button class=" navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" ></span>
-        </button>
-    <div class="  collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto"  >
-        <li class="nav-item active">
-          <a class="nav-link" href="#" style="color:green;" >Home
-                <span class="sr-only">(current)</span>
-              </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:green;">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:green;">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" style="color:green;">Contact</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="#" style="color:green;">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+    <nav class="navbar navbar-expand-md navbar-success bg-white static-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'Fund_farm/images/HamroKhetilogo.png'%}" alt="" width="125" height="125">
+            </a>
+            <button class=" navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon btn btn-warning  bg-success"></span>
+            </button>
+            <div class="  collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color:green;"><strong>Home</strong>
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:green;"><strong>Visit Farms</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:green;"><strong>About</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:green;"><strong>Services</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:green;"><strong>Contact</strong></a>
+                    </li>
+                    <li><a class="nav-link" aria-current="false" href="#"><button class="btn-round btn-success m-0
+                    font-weight-bold btn btn-secondary btn-md" style="color:orange;">Sign Up</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     {% block farm_content %}
     {% endblock %}
-</div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
