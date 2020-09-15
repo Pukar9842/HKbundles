@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Fund_farm', '0005_fundfarm_tenure_for_roi'),
+        ('fund_farm', '0005_fundfarm_tenure_for_roi'),
     ]
 
     operations = [
