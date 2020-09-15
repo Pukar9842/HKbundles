@@ -1,42 +1,56 @@
 {% extends 'base.html'%}
+{% load static %}
 {% block farm_content%}
 <div class="container-full" style="margin-top:-2rem;">
-    <div class="banner" >
-       <h1 style="color:white; margin:2rem 1rem 0rem 7.5rem;">
-           <p style="font-size: 75px;">Earn Profit </p>
-           <p style="font-size: 37px;">Invest On Agriculture</p>
-       </h1>
-         <a  href="#"><button style=" color:white; margin:2rem 1rem 0rem 10.5rem;" class="btn-round btn-success
-         font-weight-bold btn btn-secondary btn-lg">FUND A FARM</button>
-         </a>
-       <h2 style="color:white; margin:2rem 1rem 0rem 7.5rem;" > <p style="font-size: 25px;"> Empower Farmers And Be The Part
-           Of Agricultural Revolution In Nepal </p>
-       </h2>
-        <a  href="#"><button style=" color:white; margin:2rem 1rem 0rem 9rem;" class="btn-round btn-success
-         font-weight-bold btn btn-secondary btn-lg">FOLLOW OUR FARM </button>
-         </a>
+    <div class="banner">
+        <h1 style="color:orange; margin:2rem 1rem 0rem 7.5rem;">
+            <p style="font-size: 75px;">EARN PROFIT </p>
+            <p style="font-size: 37px;margin-top:-1rem;">INVEST ON AGRICULTURE</p>
+        </h1>
+        <a href="#">
+            <button style=" color:orange; margin:2rem 1rem 0rem 10.5rem;" class="btn-round btn-success
+         font-weight-bold btn btn-secondary btn-lg">FUND A FARM
+            </button>
+        </a>
+        <h2 style="color:orange; margin:2rem 1rem 0rem 7.5rem;">
+            <p style="font-size: 25px;"> EMPOWER FARMERS AND BE THE PART OF AGRICULTURE REVOLUTION IN NEPAL </p>
+        </h2>
+        <a href="#">
+            <button style=" color:orange; margin:2rem 1rem 0rem 9rem;" class="btn-round btn-success
+         font-weight-bold btn btn-secondary btn-lg">FOLLOW OUR FARM
+            </button>
+        </a>
         <br> <br>
+        <p style="color:orange; margin:2rem 1rem 0rem 7.5rem;font-size:35px;">
+            <strong>DOWNLOAD HAMRO KHETI APP</strong>
+        </p>
+        <a style=" margin:2rem 1rem 0rem 7.5rem;">
+            <a href="#"><img src="{% static 'Fund_farm/images/googleplay.png' %}" height="100" width="100"></a>
+            <a href="#" style="margin-left:3rem;"><img href="#" src="{% static 'Fund_farm/images/apple.png' %}"
+                                                       height="100" width="100"></a>
+        </a>
+        <br><br>
     </div>
 </div>
 <div class="container-fluid">
- <div class="row" style="margin:2rem 2rem 0rem 2rem;">
-     {% for farm in farms %}
-    <div class="col" style="margin:0.5rem; ">
-        <div class="card " style="width: 23rem;"  >
-            <img src="{{farm.image_url}}" class="card-img-top" alt="Agriculture product
-              " width="275" height="275" >
-            <div class="card-body">
-                <h5 class="card-title" style="color:green;"><strong>{{ farm.crop_name}}</strong></h5>
-                <p class="card-text" style="color:green;"><strong>RS: {{farm.cost_per_unit}}/-</strong></p>
-                <p class="card-text" style="color:green;"> <strong>{{farm.roi_in_percent}}% return
-                    in {{farm.tenure_for_ROI}} months</strong></p>
-                <a href="#" class="btn btn-success" style="color:orange;"><strong>Fund {{farm.crop_name}}
-                    Farm</strong></a>
+    <div class="row" style="margin:2rem 2rem 0rem 2rem;">
+        {% for farm in farms %}
+        <div class="col" style="margin:0.5rem; ">
+            <div class="card " style="width: 23rem;">
+                <img src="{{farm.image_url}}" class="card-img-top" alt="Agriculture product
+              " width="275" height="280">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:green;"><strong>{{ farm.crop_name}}</strong></h5>
+                    <p class="card-text" style="color:green;"><strong>RS: {{farm.cost_per_unit}}/-</strong></p>
+                    <p class="card-text" style="color:green;"><strong>{{farm.roi_in_percent}}% return
+                        in {{farm.tenure_for_ROI}} months</strong></p>
+                    <a href="#" class="btn btn-success" style="color:orange;"><strong>Fund {{farm.crop_name}}
+                        Farm</strong></a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
- </div>
 </div>
 {%endblock%}
 
