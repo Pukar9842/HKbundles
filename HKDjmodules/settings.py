@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fund_farm.apps.FundFarmConfig',
+    'hamrokheti_home.apps.FundFarmConfig',
+    'farm_update.apps.FarmUpdateConfig',
 ]
 
 MIDDLEWARE = [

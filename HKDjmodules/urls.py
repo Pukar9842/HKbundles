@@ -20,5 +20,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('fund_farm/', include('fund_farm.urls'))
+    path('hamrokheti_home/', include('hamrokheti_home.urls')),
+    path('farm_update/', include('farm_update.urls'))
 ]

@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class FundFarmConfig(AppConfig):
-    name = 'fund_farm'
+    name = 'hamrokheti_home'
