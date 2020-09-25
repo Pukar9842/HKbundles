@@ -22,4 +22,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hamrokheti_home/', include('hamrokheti_home.urls')),
     path('farm_update/', include('farm_update.urls'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
