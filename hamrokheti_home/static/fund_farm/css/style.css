@@ -1,4 +1,0 @@
-.banner{
-background-image:url({% static 'Fund_farm/images/paddyinhand.jpg' %})
-background-size: contain, cover;
-}

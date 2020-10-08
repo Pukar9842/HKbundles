@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block farm_content%}
+<div class="container-fluid">
+    <div class="row" style="margin:2rem 2rem 0rem 2rem;">
+        {% for farm in farms %}
+        <div class="col" style="margin:0.5rem; ">
+            <div class="card " style="width: 23rem;">
+                <img src="{{farm.image_url}}" class="card-img-top" alt="Agriculture product
+              " width="275" height="280">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:green;"><strong>{{ farm.crop_name}}</strong></h5>
+                    <p class="card-text" style="color:green;"><strong>RS: {{farm.cost_per_unit}}/-</strong></p>
+                    <p class="card-text" style="color:green;"><strong>{{farm.roi_in_percent}}% return
+                        in {{farm.tenure_for_ROI}} months</strong></p>
+                    <a href="#" class="btn btn-success" style="color:orange;"><strong>Fund {{farm.crop_name}}
+                        Farm</strong></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock%}
