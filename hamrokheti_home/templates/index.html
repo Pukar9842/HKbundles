@@ -1,20 +1,21 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block farm_content%}
-<div class="container-full" >
+<div class="container-full">
     <div class="banner" style="margin-top:0rem;">
         <br><br>
         <h1 style="color:orange; margin:3rem 1rem 0rem 7.5rem;">
-            <p style="font-size: 70px;">EARN PROFIT </p>
-            <p style="font-size: 35px;margin-top:-1rem;">INVEST ON AGRICULTURE</p>
+            <a style="font-size: 70px;">EARN PROFIT </a><br>
+            <a style="font-size: 35px;margin-top:-1rem;">INVEST ON AGRICULTURE</a>
         </h1>
         <a href="/hamrokheti_home/availablefarms">
             <button style=" color:orange; margin:1rem 1rem 0rem 8rem;" class="btn-round btn-success
          font-weight-bold btn btn-secondary btn-lg">FUND A FARM
             </button>
         </a>
-        <h2 style="color:orange; margin:2rem 1rem 0rem 7.7rem;">  <p style="font-size: 25px;"> Own a farm without owning a farm  </p>
-            <p style="font-size: 25px;"> Empower farmers and be the part of agricultural revolution  in Nepal </p>
+        <h2 style="color:orange; margin:2rem 1rem 0rem 7.7rem;">
+            <a style="font-size: 25px;"> Own a farm without owning a farm </a><br>
+            <a style="font-size: 25px;"> Empower farmers and be the part of agricultural revolution in Nepal </a>
         </h2>
         <a href="/farm_update">
             <button style=" color:orange; margin:2rem 1rem 0rem 8rem;" class="btn-round btn-success
@@ -27,93 +28,132 @@
 
         <a style=" margin:4rem 1rem 0rem 7rem;">
             <a href="#"><img src="{% static 'fund_farm/images/googleplay.png' %}" height="100" width="100"></a>
-            <a href="#" style="margin-left:3rem;"><img href="#" src="{% static 'fund_farm/images/appstore.png' %}"
-                                                       height="100" width="100"></a>
+            <a href="#" style="margin-left:3rem;"><img src="{% static 'fund_farm/images/appstore.png' %}" height="100"
+                                                       width="100"></a>
         </a>
         <br><br>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row" style="margin:2rem 2rem 0rem 2rem;">
-        {% for farm in farms %}
-        <div class="col" style="margin:0.5rem; ">
-            <div class="card " style="width: 23rem;">
-                <img src="{{farm.image_url}}" class="card-img-top" alt="Agriculture product
-              " width="275" height="280">
-                <div class="card-body">
-                    <h5 class="card-title" style="color:green;"><strong>{{ farm.crop_name}}</strong></h5>
-                    <p class="card-text" style="color:green;"><strong>RS: {{farm.cost_per_unit}}/-</strong></p>
-                    <p class="card-text" style="color:green;"><strong>{{farm.roi_in_percent}}% return
-                        in {{farm.tenure_for_ROI}} months</strong></p>
-                    <a href="#" class="btn btn-success" style="color:orange;"><strong>Fund {{farm.crop_name}}
-                        Farm</strong></a>
-                </div>
-            </div>
+<div class="container-full">
+    <center style="font-size:35px; padding-top:3rem; color: Green;">
+        <strong>How To Earn Profit</strong></center>
+    <br><br>
+    <div class="row " style="margin:2rem 1rem 1rem 3rem; ">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <strong style="color:green">1></strong>
+            <a href="#">
+                <button style=" color: orange; margin-bottom:20px;" class="btn-round btn-success
+         font-weight-bold btn btn-secondary btn-sm">SIGN UP
+                </button>
+            </a>
+            <p style="color:green;"><strong>Create an Account</strong><br>Create Hamro Kheti account with your email and
+                join with us in
+                Nepal's first digital platform to empower farmers ,invest on agriculture and get returns. </p>
         </div>
-        {% endfor %}
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <strong style="color:green">2></strong>
+            <a href="/hamrokheti_home/availablefarms">
+                <button style=" color:orange;margin-bottom:20px;" class="btn-round btn-success
+         font-weight-bold btn btn-secondary btn-sm">FUND FARM
+                </button>
+            </a>
+            <p style="color:green;"><strong> Choose a Farm</strong><br>Sign in and choose a farm you like and select the
+                number
+                of units you want to fund and proceed for payment through different online payment methods.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <strong style="color:green">3></strong>
+            <a href="/farm_update">
+                <button style=" color:orange;margin-bottom:20px;" class="btn-round btn-success
+         font-weight-bold btn btn-secondary btn-sm">FOLLOW FARM
+                </button>
+            </a>
+            <p style="color:green;"><strong> Get updates</strong><br> Follow farm you funded and get regular updates
+                about the
+                activities and status of farm you selected on your personal dashboard. </p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <strong style="color:green">4></strong>
+            <a href="/farm_update">
+                <button style=" color:orange;margin-bottom:20px;" class="btn-round btn-success
+         font-weight-bold btn btn-secondary btn-sm">DASHBOARD
+                </button>
+            </a>
+            <p style="color:green;"><strong> Get Profit</strong><br>Get return after the mention time period and
+                percentage
+                on harvest when the production is completed.We guarantee the return. </p>
+        </div>
     </div>
-     <section id="services" class="features-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section-title text-center pb-10">
-                        <h3 class="title">How To Earn Profit</h3>
-                        <p class="text">Follow these few simple step</p>
-                    </div> <!-- row -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Graphics Design</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-brush"></i>
-                                <img class="shape" src="assets/images/f-shape-1.svg" alt="Shape">
-                            </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Short description for the ones who look for something new. Short description for the ones who look for something new.</p>
-                            <a class="features-btn" href="#">LEARN MORE</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Website Design</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-layout"></i>
-                                <img class="shape" src="assets/images/f-shape-1.svg" alt="Shape">
-                            </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Short description for the ones who look for something new. Short description for the ones who look for something new.</p>
-                            <a class="features-btn" href="#">LEARN MORE</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Digital Marketing</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-bolt"></i>
-                                <img class="shape" src="assets/images/f-shape-1.svg" alt="Shape">
-                            </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Short description for the ones who look for something new. Short description for the ones who look for something new.</p>
-                            <a class="features-btn" href="#">LEARN MORE</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
+</div>
+<div class="container-fluid" >
+    <center style="font-size:35px;padding-bottom:3rem; padding-top:3rem;color: Green;"><strong> Our Partners</strong></center>
+    <div class="row" style="margin: 0rem 0rem 1rem 7rem ">
+        <div class="col-md-4 col-sm-6 col-xs-12"  style="margin-bottom: 2rem; " >
+            <a href="http://www.redshift.com.np" style="text-decoration:none; "> <img height="150px" width="200px"
+                                            src="{% static '/fund_farm/images/redshift.jpg'%}">
+               <br><strong style=" color: green;margin-left:2.5rem; "> Redshift Tech</strong>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom: 2rem; " >
+            <a href="http://www.hellotarkari.com" style="text-decoration:none; " > <img height="150px" width="150px"
+                                             src="{% static '/fund_farm/images/LogoHT.png'%}">
+                <br><strong style="color: green;margin-left:1.5rem;" >Hello Tarkari</strong>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"  style="margin-bottom: 2rem; ">
+            <a href="http://www.hellotarkari.com"style="text-decoration:none; " > <img height="150px" width="150px"
+                                             src="{% static '/fund_farm/images/LogoHT.png'%}">
+                <br><strong style="color: green;margin-left:1.5rem;" >Hello Tarkari</strong>
+            </a>
+        </div>
+    </div>
 
 </div>
+<div class="container-fluid">
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="{% static 'fund_farm/images/HamroKhetilogo.png'%}">
+				<h3>Hamro<span>Kheti</span></h3>
+				<p class="footer-company-name">© 2020 Hamro Kheti Nepal Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p>
+                          <span>Arjundhara-6,Jhapa,Nepal</span>
+                      </p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+977 9842675827</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="/hamrokheti_home/contact"> support@hamrokheti.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About Our Company</span>
+                    We are the first Agritech company in Nepal connecting agriculture with
+                    information technology. We provide service of funding,production,supply
+                    and technical support to farmers .
+                </p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+
+</div>
+
 {%endblock%}
 
 
